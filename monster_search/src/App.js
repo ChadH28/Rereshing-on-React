@@ -25,6 +25,7 @@ import React from 'react';
 // }
 
 
+
 // Class based
 class App extends React.Component {
   constructor() {
@@ -33,29 +34,38 @@ class App extends React.Component {
       // calling state property
       // string: 'whats happening'
       coaches: [
-        {
-          id: '1',
-          name: 'Xavi'
-        },
-        {
-          id: '2',
-          name: 'Lampard'
-        },
-        {
-          id: '3',
-          name: 'Gerrard'
-        },
-        {
-          id: '4',
-          name: 'Pep'
-        },
-        {
-          id: '5',
-          name: 'Tuchel'
-        },
+        // hard coded data
+        // {
+        //   id: '1',
+        //   name: 'Xavi'
+        // },
+        // {
+        //   id: '2',
+        //   name: 'Lampard'
+        // },
+        // {
+        //   id: '3',
+        //   name: 'Gerrard'
+        // },
+        // {
+        //   id: '4',
+        //   name: 'Pep'
+        // },
+        // {
+        //   id: '5',
+        //   name: 'Tuchel'
+        // },
       ]
     }
   }
+  // to execute the React code when the component is already placed in the DOM (Document Object Model). This method is called during the Mounting phase of the React Life-cycle i.e after the component is rendered.
+  componentDidMount() {
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then(res => res.json())
+    // .then(coaches =>  console.log(coaches))
+    .then(fetchedUsers =>  this.setState({coaches: fetchedUsers}))
+  }
+
   render() {
     return (
       <div className="App">
