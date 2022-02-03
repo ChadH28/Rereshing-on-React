@@ -1,0 +1,13 @@
+.card-list {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.coach-container, .card-list  {
+  width: 84vw;
+  margin: 0 auto;
+  background-color: white;
+  padding: 25px;
+}

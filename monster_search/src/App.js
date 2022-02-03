@@ -1,6 +1,8 @@
-
+// use capital letters when calling component and also when putting it in tags
+import { CardList } from './components/card-list/cardList';
 import './App.css';
 import React from 'react';
+
 
 // Function based
 // function App() {
@@ -33,7 +35,7 @@ class App extends React.Component {
     this.state = {
       // calling state property
       // string: 'whats happening'
-      coaches: [
+      bots: [
         // hard coded data
         // {
         //   id: '1',
@@ -61,18 +63,16 @@ class App extends React.Component {
   // to execute the React code when the component is already placed in the DOM (Document Object Model). This method is called during the Mounting phase of the React Life-cycle i.e after the component is rendered.
   componentDidMount() {
     fetch('https://jsonplaceholder.typicode.com/users')
-    .then(res => res.json())
-    // .then(coaches =>  console.log(coaches))
-    .then(fetchedUsers =>  this.setState({coaches: fetchedUsers}))
+      .then(res => res.json())
+      // .then(bots =>  console.log(bots))
+      .then(fetchedUsers => this.setState({ bots: fetchedUsers }))
   }
 
   render() {
     return (
       <div className="App">
-        {
-          // this.state.property
-          this.state.coaches.map(coach => <h1 key={coach.id}> {coach.name} </h1>)
-        }
+        <div className='coach-container'><h1>Bots</h1></div>
+        <CardList bots={this.state.bots}/>
       </div>
     );
   }
