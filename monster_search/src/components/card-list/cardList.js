@@ -13,7 +13,7 @@ export const CardList = props => {
         // this.props.property
         // getting info off props not state
         // Props are key and coach
-        props.coaches.map(bot => <Card key={bot.id} bot={bot}/>)
+        props.bots.map(bot => <Card key={bot.id} bot={bot}/>)
       }
     </div>
   );

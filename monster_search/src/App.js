@@ -4,8 +4,8 @@ import './App.css';
 import React from 'react';
 
 
-// Function based
 // function App() {
+// Function based
 //   return (
 //     <div className="App">
 //       <header className="App-header">
@@ -26,10 +26,8 @@ import React from 'react';
 //   );
 // }
 
-
-
-// Class based
 class App extends React.Component {
+// Class based
   constructor() {
     super();
     this.state = {
@@ -70,6 +68,7 @@ class App extends React.Component {
 
   render() {
     return (
+      // Calling cardList parent and the card children props so Card/item(child) => cardlist/gallery(parent) => App(main)
       <div className="App">
         <div className='coach-container'><h1>Bots</h1></div>
         <CardList bots={this.state.bots}/>

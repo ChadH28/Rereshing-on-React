@@ -6,24 +6,24 @@ import React from 'react';
 export const Card = (props) => {
   return (
     <div className="card">
-      <img alt='monsterImg' src={`https://robohash.org/${props.coach.id}?set=2&size=160x160`}/>
+      <img alt='monsterImg' src={`https://robohash.org/${props.bot.id}?set=2&size=160x160`}/>
       <h2>
-        {props.coach.name} AKA '{props.coach.username}'
+        {props.bot.name} AKA '{props.bot.username}'
       </h2>
       <p>
-        Residing at <b>{props.coach.address.street}</b>
+        Residing at <b>{props.bot.address.street}</b>
       </p>
       <p>
-        Email: <a href={`mailto:${props.coach.email}`}>{props.coach.email}</a>
+        Email: <a href={`mailto:${props.bot.email}`}>{props.bot.email}</a>
       </p>
       <p>
-        Contact: #{props.coach.phone}
+        Contact: #{props.bot.phone}
       </p>
     </div>
   );
 }
  
-// List of properties to call off Coach prop 
+// List of properties to call off Bot prop 
 // {
 //   "id": 1,
 //   "name": "Leanne Graham",
