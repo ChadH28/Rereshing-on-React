@@ -1,11 +1,11 @@
 .card-list {
-
+  margin-top: 30px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 20px;
 }
 
-.coach-container, .card-list  {
+.bots-container  {
   width: 84vw;
   margin: 0 auto;
   background-color: white;
