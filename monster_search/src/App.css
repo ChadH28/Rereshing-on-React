@@ -3,3 +3,9 @@
   background-color:  #E9ECEF;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Bigelow+Rules&display=swap');
+
+h1{
+  font-family: 'Bigelow Rules', cursive;
+  font-size: 42px;
+}

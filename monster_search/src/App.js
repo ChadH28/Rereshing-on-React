@@ -70,6 +70,10 @@ class App extends React.Component {
       .then(fetchedUsers => this.setState({ bots: fetchedUsers }))
   }
 
+  handleChange = (e) => {
+    this.setState({ searchField: e.target.value }, () => console.log(this.state))
+  }
+
   render() {
     // destructuring this.state
     const { bots, searchField } = this.state
@@ -81,7 +85,7 @@ class App extends React.Component {
         <div className='bots-container'>
           <h1>Bots</h1>
           <Searchbar
-            handleChange={e => this.setState({ searchField: e.target.value }, () => console.log(this.state))}
+            handleChange={this.handleChange}
             placeholder='Search Bots here..'
           />
           {/* Component called in  */}
